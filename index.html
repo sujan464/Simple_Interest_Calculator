@@ -1,16 +1,47 @@
+<!DOCTYPE html>
 <html>
     <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <title>SI Calculator by Sujan</title>
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+            <div class="child">
+                <!-- Creating child <div> for shifitng the content below to center-->
+                Amount <input type="number"  id="principal">  <br>
+                Rate <input type="range" onchange="updateRate()" id="rate" min="1" max="20" step="0.25" value="10.25"> 
+                <span id="rate_val">
+                    10.25
+                </span>%
+				<br/>
+                No. of Years <select id="years">
+                    <option vlaue="1">1</option>
+                    <option vlaue="2">2</option>
+                    <option vlaue="3">3</option>
+                    <option vlaue="4">4</option>
+                    <option vlaue="5">5</option>
+                    <option vlaue="6">6</option>
+                    <option vlaue="7">7</option>
+                    <option vlaue="8">8</option>
+                    <option vlaue="9">9</option>
+                    <option vlaue="10">10</option>
+                </select>  <br/>
+				
+                <button onclick="compute()">Compute Interest</button>
+                <br/>
+				<div class="sub_child">
+                    <!--Creating sub-child to set the line spacing of the result-->
+					<br>
+					<span id="result">
+					</span>
+				</div>
+            </div>
+            <footer>
+                &#169; This Calculator belongs to Sujan
+            </footer>
+            </div>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
     </body>
 </html>

@@ -1,4 +1,22 @@
-body {background-color:tan;}
-h1{color:green;}
+body {background-color:black;
+font-family:arial;
+font-weight:600;
+color:white}
+h1{color:grey;font-family:verdana}
+.maindiv{
+    background-color:white;
+    color:black;
+    width:500px;
+    padding:20px;
+    border-radius:25px;
+    line-height:1.75;
+}
+.child{
+    margin-left: 80px
+}
+.highlight{background-color:yellow}
+.sub_child{
+	line-height:1;
+}
 
 
